@@ -4,7 +4,7 @@ Hall thruster performance prediction with Neural Network Ensemble
 Dataset for HallNN training
 =============
 
-![image](https://github.com/JaehongPark-Plasma/HallNN/assets/78528144/dd57ef35-97ee-44f8-8eb3-63fc11026332)
+![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/intro.png?raw=true)
 
 # Information of RandomHallThruster_Dataset.csv
 Contains 2,500 randomly generated Hall thruster performance data points for neural network training   
