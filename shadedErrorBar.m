@@ -1,3 +1,5 @@
+%% Rob Campbell (2024). raacampbell/shadedErrorBar (https://github.com/raacampbell/shadedErrorBar), GitHub. Retrieved June 19, 2024.
+
 function varargout=shadedErrorBar(x,y,errBar,varargin)
 % generate continuous error bar area around a line plot
 %
