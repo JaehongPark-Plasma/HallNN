@@ -3,6 +3,9 @@
 
 # HallNN structure
 * **Ensemble of 100 neural networks**
+
+![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/intro.png?raw=true)
+
 * **13 inputs (thruster design and operating parameters)**
   * Anode flow rate (SCCM)
   * Voltage drop (V)
@@ -14,8 +17,6 @@
 * **4 outputs**
   * Thrust & Prediction uncertainty (standard deviation)
   * Discharge current & Prediction uncertainty (standard deviation)
-
-![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/intro.png?raw=true)
 
 ## Information of VirtualHallThruster_Dataset.csv
 Contains 4,500 **"virtual"** Hall thruster performance data points, which were generated with numerical simulation (in-house KEPSi-1D code) where Hall thruster design & operating parameters were generated ramdomly.
@@ -45,6 +46,7 @@ Contains 4,500 **"virtual"** Hall thruster performance data points
 
 ## Vritual Hall Thruster dataset preview
 
-
+![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/Input_thrust_VHT.png?raw=true)
+![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/Input_Id_VHT.png?raw=true)
 
 
