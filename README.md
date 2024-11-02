@@ -4,10 +4,16 @@
 # HallNN structure
 * **Ensemble of 100 neural networks**
 * **13 inputs (thruster design and operating parameters)**
-  * See belows (datset) 
+  * Anode flow rate (SCCM)
+  * Voltage drop (V)
+  * Outer channel radius (mm)
+  * Inner channel radius (mm)
+  * Discharge channel length (mm)
+  * Eight radial magnetic field fitting coefficients
+  * (See *Information of Dataset* for details)
 * **4 outputs**
-  * Thrust & its standard deviation
-  * Discharge current & its standard deviation
+  * Thrust & Prediction uncertainty (standard deviation)
+  * Discharge current & Prediction uncertainty (standard deviation)
 
 ![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/intro.png?raw=true)
 
