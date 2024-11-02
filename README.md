@@ -48,5 +48,3 @@ Contains 4,500 **"virtual"** Hall thruster performance data points
 
 ![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/Input_thrust_VHT.png?raw=true)
 ![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/Input_Id_VHT.png?raw=true)
-
-
