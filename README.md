@@ -1,8 +1,8 @@
 # HallNN: Code and data for "Predicting performance of Hall effect ion source using machine learning"
 **Hall** thruster performance prediction with **N**eural **N**etwork ensemble
 
-# HallNN structure
-* **Ensemble of 100 neural networks**
+## HallNN structure
+### **Ensemble of 100 neural networks**
 
 ![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/intro.png?raw=true)
 
@@ -40,8 +40,12 @@ Contains 4,500 **"virtual"** Hall thruster performance data points, which were g
 Note) Standard deviations of 'empirical parameter average method' result, which were *not used* in the training process (see the paper).    
 
 ## Information of NN_VHT_in.mat and NN_VHT_out.mat
-Contains 4,500 **"virtual"** Hall thruster performance data points
+Contains 4,500 **"virtual"** Hall thruster performance data points.   
 *NN_VHT_in.mat* is the input mat file (13 parameters) for the MATLAB code.   
-*NN_VHT_out.mat* is the output dataset (**thrust** and **discharge current**) mat file (2 parameters) for the MATLAB code.   
+*NN_VHT_out.mat* is the output mat file (**thrust** and **discharge current**) for the MATLAB code.   
 
 ## Vritual Hall Thruster dataset preview
+### Input parameters $\leftrightarrow$ Thrust
+![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/Input_thrust_VHT.png?raw=true)
+### Input parameters $\leftrightarrow$ Discharge current
+![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/Input_Id_VHT.png?raw=true)
