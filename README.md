@@ -1,5 +1,6 @@
-# HallNN: Code and data for "Predicting performance of Hall effect ion source using machine learning"
-**Hall** thruster performance prediction with **N**eural **N**etwork ensemble
+# HallNN: Code and training dataset for "Predicting performance of Hall effect ion source using machine learning"
+**Hall** thruster performance prediction with **N**eural **N**etwork ensemble   
+Submitted to Advanced Intelligent Systems (2024)
 
 ## HallNN structure
 ### **Ensemble of 100 neural networks**
@@ -49,3 +50,7 @@ Contains 4,500 **"virtual"** Hall thruster performance data points.
 ![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/Input_thrust_VHT.png?raw=true)
 ### Input parameters $\leftrightarrow$ Discharge current
 ![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/Input_Id_VHT.png?raw=true)
+
+## Prediction using Trained Neural Networks (manuscript version)
+
+## Training using Virtual Hall Thruster dataset
