@@ -53,5 +53,27 @@ Contains 4,500 **"virtual"** Hall thruster performance data points.
 ![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/Input_Id_VHT.png?raw=true)
 
 ## Prediction using Trained Neural Networks (manuscript version)
+### PREDICTION_with_pretrained_HallNN.m  
+Requirements: Deep Learning Toolbox / Curve Fitting Toolbox  
 
 ## Training using Virtual Hall Thruster dataset
+### Training_HallNN_with_VHT_Dataset.m  
+Requirements: Deep Learning Toolbox / Curve Fitting Toolbox  
+
+## Simple execution of HallNN
+It's as easy as:  
+```matlab
+[Thrust, sig_Thrust, Id, sig_Id] = HallNN(AFR, Va-Vc, Rout, Rin, Lch, Br_fit_coeff, HallNN_best, flag_disp);
+```
+Thrust, discharge current, and prediction uncertainties are estimated based on the characteristics of the KHT-40 (FM) 200 W-class Hall thruster.  
+
+### Run_HallNN.m  
+Requirements: Deep Learning Toolbox / Curve Fitting Toolbox  
+
+### Run_HallNN_with_fcns.m  
+*All network objects were converted into simple functions, located in the +HallNN_fcn folder.*  
+Requirements: Curve Fitting Toolbox  
+
+In both cases, the output will be:  
+**Thrust = 6.48 mN | sig_Thrust = 0.13 mN | Id = 0.43 A | sig_Id = 0.01 A**  
+
