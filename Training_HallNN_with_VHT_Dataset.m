@@ -107,6 +107,7 @@ NN_result{5} = HL2size; % H2
 NN_result{6} = eps_adv; % epsilon
 NN_result{7} = net_epoch; % Early stop
 NN_result{8} = Test_frac; % Test dataset fraction
+NN_result{9} = NN_minmax; % NN_minmax
 
 %% SAVE VHT dataset trained HallNN result
 save(['results/HallNN_VHTver.mat'],"NN_result","NN_minmax",'-v7.3');
