@@ -1,5 +1,7 @@
 %% J. Park et al., Predicting Performance of Hall Effect Ion Source Using Machine Learning
 clc;clear;
+disp('Requirement: Deep Learning Toolbox / Curve Fitting Toolbox');
+disp(' ');
 % Requirements: Deep Learning Toolbox / Curve Fitting Toolbox
 % This will load pretrained HallNN's neural networks
 load("Pretrained_HallNN.mat");

@@ -1,5 +1,7 @@
 %% J. Park et al., Predicting Performance of Hall Effect Ion Source Using Machine Learning
 clc;clear;
+disp('Requirement: Curve Fitting Toolbox');
+disp(' ');
 % Requirements: Curve Fitting Toolbox
 % This version is not required "Deep Learning Toolbox" as all neural networks are stored as a function!
 
