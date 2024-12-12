@@ -1,3 +1,4 @@
+% Radial magnetic field fitting fuction
 function [z_gen,B_gen] = B_fitfcn(z,Bm,Lm,B1,f1,s1,B2,f2,s2)
 z_gen = z;
 B_gen = z*0;

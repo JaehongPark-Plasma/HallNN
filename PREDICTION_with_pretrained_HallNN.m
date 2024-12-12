@@ -1,142 +1,8 @@
-%% Plot randomly generated Hall thruster dataset
-% Input <=> T
-clc;clear;
-load('Data/DATA_RHT_in.mat');
-load('Data/DATA_RHT_out.mat');
-LW = 0.7;
-font = 17;
-figure(703)
-t = tiledlayout(4,5,'TileSpacing','Compact');
-% 1
-nexttile
-plot(rinput(:,1),routput(:,1),'.','color','#FF4551','Markersize',4,'linewidth',LW-0.5);
-xlabel('Anode flow rate (sccm)','Fontsize',font)
-set(gca,'XMinorTick','on','YMinorTick','on','Fontsize',font-5,'linewidth',LW-0.5,'Layer','top')
-% 2
-nexttile
-plot(rinput(:,2),routput(:,1),'.','color','#FF4551','Markersize',4,'linewidth',LW-0.5);
-xlabel('V_d (V)','Fontsize',font)
-set(gca,'XMinorTick','on','YMinorTick','on','Fontsize',font-5,'linewidth',LW-0.5,'Layer','top')
-xlim([min(rinput(:,2))*0.8 max(rinput(:,2))*1.05])
-% 3
-nexttile
-plot(rinput(:,3),routput(:,1),'.','color','#FF4551','Markersize',4,'linewidth',LW-0.5);
-xlabel('R_{out} (mm)','Fontsize',font)
-set(gca,'XMinorTick','on','YMinorTick','on','Fontsize',font-5,'linewidth',LW-0.5,'Layer','top')
-xlim([min(rinput(:,3))*0.8 max(rinput(:,3))*1.05])
-% 4
-nexttile
-plot(rinput(:,4),routput(:,1),'.','color','#FF4551','Markersize',4,'linewidth',LW-0.5);
-xlabel('R_{in} (mm)','Fontsize',font)
-set(gca,'XMinorTick','on','YMinorTick','on','Fontsize',font-5,'linewidth',LW-0.5,'Layer','top')
-xlim([min(rinput(:,4))*0.8 max(rinput(:,4))*1.05])
-% 5
-nexttile
-plot(rinput(:,5),routput(:,1),'.','color','#FF4551','Markersize',4,'linewidth',LW-0.5);
-xlabel('L_{ch} (mm)','Fontsize',font)
-set(gca,'XMinorTick','on','YMinorTick','on','Fontsize',font-5,'linewidth',LW-0.5,'Layer','top')
-xlim([min(rinput(:,5))*0.8 max(rinput(:,5))*1.05])
-% 6
-nexttile
-plot(rinput(:,6),routput(:,1),'.','color','#FF4551','Markersize',4,'linewidth',LW-0.5);
-xlabel('B_m (G)','Fontsize',font)
-set(gca,'XMinorTick','on','YMinorTick','on','Fontsize',font-5,'linewidth',LW-0.5,'Layer','top')
-xlim([min(rinput(:,6))*0.8 max(rinput(:,6))*1.05])
-% 7
-nexttile
-plot(rinput(:,7),routput(:,1),'.','color','#FF4551','Markersize',4,'linewidth',LW-0.5);
-xlabel('L_m (mm)','Fontsize',font)
-set(gca,'XMinorTick','on','YMinorTick','on','Fontsize',font-5,'linewidth',LW-0.5,'Layer','top')
-xlim([min(rinput(:,7))*0.9 max(rinput(:,7))*1.05])
-% 8
-nexttile
-plot(rinput(:,8),routput(:,1),'.','color','#FF4551','Markersize',4,'linewidth',LW-0.5);
-xlabel('B_1 (G)','Fontsize',font)
-set(gca,'XMinorTick','on','YMinorTick','on','Fontsize',font-5,'linewidth',LW-0.5,'Layer','top')
-xlim([min(rinput(:,8))*0.9 max(rinput(:,8))*1.05])
-% 9
-nexttile(11)
-plot(rinput(:,9),routput(:,1),'.','color','#FF4551','Markersize',4,'linewidth',LW-0.5);
-xlabel('c_1 (-)','Fontsize',font)
-set(gca,'XMinorTick','on','YMinorTick','on','Fontsize',font-5,'linewidth',LW-0.5,'Layer','top')
-xlim([min(rinput(:,9))*0.9 max(rinput(:,9))*1.05])
-% 10
-nexttile(12)
-plot(rinput(:,10),routput(:,1),'.','color','#FF4551','Markersize',4,'linewidth',LW-0.5);
-xlabel('s_1 (mm)','Fontsize',font)
-set(gca,'XMinorTick','on','YMinorTick','on','Fontsize',font-5,'linewidth',LW-0.5,'Layer','top')
-xlim([min(rinput(:,10))*0.9 max(rinput(:,10))*1.05])
-% 11
-nexttile(13)
-plot(rinput(:,11),routput(:,1),'.','color','#FF4551','Markersize',4,'linewidth',LW-0.5);
-xlabel('B_2 (G)','Fontsize',font)
-set(gca,'XMinorTick','on','YMinorTick','on','Fontsize',font-5,'linewidth',LW-0.5,'Layer','top')
-xlim([min(rinput(:,11))*0.9 max(rinput(:,11))*1.05])
-% 12
-nexttile(16)
-plot(rinput(:,12),routput(:,1),'.','color','#FF4551','Markersize',4,'linewidth',LW-0.5);
-xlabel('c_2 (-)','Fontsize',font)
-set(gca,'XMinorTick','on','YMinorTick','on','Fontsize',font-5,'linewidth',LW-0.5,'Layer','top')
-xlim([min(rinput(:,12))*0.9 max(rinput(:,12))*1.05])
-% 13
-nexttile(17)
-plot(rinput(:,13),routput(:,1),'.','color','#FF4551','Markersize',4,'linewidth',LW-0.5);
-xlabel('s_2 (mm)','Fontsize',font)
-set(gca,'XMinorTick','on','YMinorTick','on','Fontsize',font-5,'linewidth',LW-0.5,'Layer','top')
-xlim([min(rinput(:,13))*0.9 max(rinput(:,13))*1.05])
-
-leg = legend('Random Hall thruster','Fontsize',font-4,'location','northwest');
-leg.Layout.Tile = 18;
-
-ylabel(t,'Thrust (mN)','Fontsize',font+3)
-
-x0=50;
-y0=50;
-width=1600;
-height=900;
-set(gcf,'position',[x0,y0,width,height])
-hold off;
-saveas(gcf,'results/Dataset_Input_Thrust.png');
-
-%histogram
-RanHall_P = rinput(:,2).*routput(:,2);
-RanHall_T = routput(:,1);
-
-PP = [RanHall_P];
-TT = [RanHall_T];
-RK_name = cell(numel(PP),1);
-for i=1:numel(RanHall_P)
-RK_name{i} = 'RHT';
-end
-figure(20)
-c = scatterhist(PP,TT,'Group',RK_name,'Kernel','on','Style','bar','NBins',[30,30],'Location','SouthWest','Direction','in','Color','rb','LineStyle',{'-','-'},'LineWidth',1.5,'Marker','.','MarkerSize',4.5,'legend','off');
-
-hold on;
-dd = rinput(:,2).*routput(:,2);
-LL = linspace(0,1e5,100);
-RH_TP = mean(routput(:,1)./(rinput(:,2).*routput(:,2)))*1e3;
-disp(['Dataset T/P  :  ',num2str(RH_TP),'  mN/kW'])
-plot(LL,LL*40e-3,'--k','linewidth',LW+2.5);
-plot(LL,LL*80e-3,'--k','linewidth',LW+2.5);
-xlabel('V_d\cdotI_d (W)','Fontsize',font)
-ylabel('Thrust (mN)','Fontsize',font)
-text(900,150,'80 mN/kW','Fontsize',font-4)
-text(2000,65,'40 mN/kW','Fontsize',font-4)
-set(gca,'XMinorTick','on','YMinorTick','on','Fontsize',font-5,'linewidth',LW+0,'Layer','top')
-xlim([0 3000])
-ylim([0 200])
-hold off;
-x0=50;
-y0=50;
-width=600;
-height=600;
-set(gcf,'position',[x0,y0,width,height])
-saveas(gcf,'results/Dataset_Input_Thrust_Histogram.png');
-
-% =========================================================
+%% J. Park et al., Predicting Performance of Hall Effect Ion Source Using Machine Learning
+clc; clear; close all;
 disp([' ']);
-disp(['HallNN Prediction Results with KHT-40']);
-disp(['with pre-trained NN from RHT 2,500 points']);
+disp(['HallNN Prediction Results with KHT-40, 200 W-class KAIST Hall thruster (FM)']);
+disp(['with pre-trained neural networks from the manuscript']);
 
 %% Test CASE - 1 (HallNN prediction)
 % Originally, it is a validation case but, in this HallNN open-version it is the test case.
@@ -148,16 +14,17 @@ LW = 1.5;
 err1 = 2.576; % 99% CI
 err2 = 1.282; % 80% CI
 
-BrDataName = 'Data/MagneticField_Br/BrData_KHT40.txt'
+BrDataName = 'Data/MagneticField_Br/BrData_KHT40.txt';
 
 load('Data/Experimental/Experimental_KHT40.mat');
 load('Data/Numerical/Numerical_KHT40.mat');
-load('PRETRAINED_HallNN_open.mat');
-
-NNens = NN_result{1};
-NNTRens = NN_result{2};
-net_ens_no = NN_result{3};
-net_epoch = NN_result{7};
+load('Pretrained_HallNN.mat');
+%
+NNens = HallNN_best{1};
+NNTRens = HallNN_best{2};
+net_ens_no = HallNN_best{3};
+net_epoch = HallNN_best{7};
+NN_minmax = HallNN_best{9};
 s2mgs = 0.09763;
 
 %====== THRUST / MFRens
@@ -192,9 +59,12 @@ MFR_trig = 11; % sccm, for histogram plot
 for i=1:numel(MFR)
     for ens = 1:net_ens_no
         NN_input = [MFR(i), Va-Vc, Rout, Rin, Lch, BCoff_K40];
+        NN_input = log(NN_input); % Logarithmic transformation
         NN_input = (NN_input-NN_minmax.input_min)./NN_minmax.input_max;
         NN_output(1:2) = NNens{ens}(NN_input');
         NN_output(1:2) = (NN_output(1:2).*NN_minmax.output_max+NN_minmax.output_min);
+        NN_output(1:2) = exp(NN_output(1:2)); % Recover-Logarithmic transformation
+
         thrust_(ens) =  (NN_output(1));
         current_(ens) = (NN_output(2));
         eff_(ens) = (thrust_(ens)^2)/(2*MFR(i)*s2mgs*Va*current_(ens));
