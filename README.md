@@ -1,6 +1,6 @@
 # HallNN: Code and training dataset for "Predicting performance of Hall effect ion source using machine learning"
 **Hall** thruster performance prediction with **N**eural **N**etwork ensemble   
-Submitted to Advanced Intelligent Systems (2024)
+Accepted, Advanced Intelligent Systems (2024)
 
 ## HallNN structure
 ### **Ensemble of 100 neural networks**
