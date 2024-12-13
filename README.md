@@ -79,6 +79,10 @@ It uses **Pretrained_HallNN.mat** that contains 100 neural networks information 
 > > HallNN_best{3-8}: M, H1, H2, adversarial rate, early stop, test fraction  
 > > HallNN_best{9}: min_max of input and output
 
+Thrust (HallNN_VHTver)          |  Discharge current (HallNN_VHTver)  
+:-------------------------:|:-------------------------:  
+![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/results/HallNN_KHT40_AFR_Thrust_V250.png?raw=true)  |  ![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/results/HallNN_KHT40_AFR_Id_V250.png?raw=true)  
+
 
 You can also chose to use Virtual Hall Thruster dataset trained HallNN - "ressults/HallNN_VHTver.mat"  
 ```matlab
@@ -97,7 +101,7 @@ It uses **results/HallNN_VHTver.mat** that contains 100 neural networks informat
 
 Therefore, this prediction result represents a test case since the KHT-40 information is not utilized in training HallNN_VHTver.  
 
-Thrust           |  Discharge current  
+Thrust (HallNN_VHTver)          |  Discharge current (HallNN_VHTver)  
 :-------------------------:|:-------------------------:  
 ![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/results/HallNN_VHTver_KHT40_AFR_Thrust_V250.png?raw=true)  |  ![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/results/HallNN_VHTver_KHT40_AFR_Id_V250.png?raw=true)  
 
