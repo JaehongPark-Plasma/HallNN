@@ -25,17 +25,13 @@ load('Data/Numerical/Numerical_KHT40.mat');
 % Load manuscript version HallNN
 load('Pretrained_HallNN.mat');
 NNens = HallNN_best{1};
-NNTRens = HallNN_best{2};
 net_ens_no = HallNN_best{3};
-net_epoch = HallNN_best{7};
 NN_minmax = HallNN_best{9};
 
 % Load VHT-dataset-only-trained version HallNN -> Now it is a test case
 % load('results/HallNN_VHTver.mat');
 % NNens = NN_result{1};
-% NNTRens = NN_result{2};
 % net_ens_no = NN_result{3};
-% net_epoch = NN_result{7};
 % NN_minmax = NN_result{9};
 
 
