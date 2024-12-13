@@ -9,7 +9,6 @@ disp([' ']);
 
 %% Validation CASE - 1 (HallNN prediction)
 % KHT-40 Hall thruster
-clc; clear; close all;
 SAVE = 1; % if == 1 => fig save.
 font = 18;
 LW = 1.5;
@@ -153,7 +152,7 @@ hold on;
 set(gca,'XMinorTick','on','YMinorTick','on','Fontsize',font-5,'linewidth',LW-0.5,'Layer','top')
 S(2)=shadedErrorBar(MFR,current,err2*current_std,'lineProps',{'color','r','linewidth',LW-0.5},'transparent',0);
 
-P1 = plot(numerical_(:,1),numerical_(:,2),'ko','LineWidth',LW+0.5);
+P1 = plot(numerical_(:,1),numerical_(:,4),'ko','LineWidth',LW+0.5);
 P2 = errorbar(KHT40pfm((KHT40pfm(:,2)==Va),1),KHT40pfm((KHT40pfm(:,2)==Va),8),KHT40pfm((KHT40pfm(:,2)==Va),9),'--b^','LineWidth',1.0,'MarkerSize',5,'MarkerEdgeColor','blue','MarkerFaceColor','blue');
 P3 = plot(MFR,current_SC,'k+', 'LineWidth', LW+0.5);
 xlim([min(MFR) max(MFR)])
