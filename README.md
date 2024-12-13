@@ -15,7 +15,7 @@ DOI: 10.1002/aisy.202400555
   * Inner channel radius (mm)
   * Discharge channel length (mm)
   * Eight radial magnetic field fitting coefficients
-  * (See *Information of Dataset* for details)
+  * (See *Information of training dataset* for details)
 * **4 outputs**
   * Thrust & Prediction uncertainty (standard deviation)
   * Discharge current & Prediction uncertainty (standard deviation)
@@ -23,8 +23,10 @@ DOI: 10.1002/aisy.202400555
 
 ***
 
-## Information of VirtualHallThruster_Dataset.csv
-Contains 4,500 **"virtual"** Hall thruster performance data points, which were generated with numerical simulation (in-house KEPSi-1D code) where Hall thruster design & operating parameters were generated ramdomly.
+## Information of training dataset
+### Information of VirtualHallThruster_Dataset.csv and .xlsx  
+Contains 4,500 **"virtual"** Hall thruster performance data points, which were generated with numerical simulation (in-house KEPSi-1D code) where Hall thruster design & operating parameters were generated ramdomly.  
+Located in Data\Dataset_in_xlsx_and_csv folder.  
 
 Rows from 1 to 13 are **INPUT** parameters   
 > 1. Anode flow rate (SCCM), 1 sccm = 0.09763 mg/s relationship was used.
