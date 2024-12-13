@@ -46,17 +46,60 @@ Contains 4,500 **"virtual"** Hall thruster performance data points.
 *NN_VHT_in.mat* is the input mat file (13 parameters) for the MATLAB code.   
 *NN_VHT_out.mat* is the output mat file (**thrust** and **discharge current**) for the MATLAB code.   
 
-## Vritual Hall Thruster dataset preview
+## Vritual Hall thruster (VHT) dataset overview
 ### Input parameters $\leftrightarrow$ Thrust
 ![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/Input_thrust_VHT.png?raw=true)
 ### Input parameters $\leftrightarrow$ Discharge current
 ![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/Input_Id_VHT.png?raw=true)
 
-## Prediction using Trained Neural Networks (manuscript version)
+## Prediction using trained neural networks (manuscript version)
 ### PREDICTION_with_pretrained_HallNN.m  
 Requirements: Deep Learning Toolbox / Curve Fitting Toolbox  
 
-## Training using Virtual Hall Thruster dataset
+This code generates HallNN Prediction Results with KHT-40, 200 W-class KAIST Hall thruster (FM) with pre-trained neural networks from the manuscript.
+> Anode mass flow rate: 6 to 13 sccm  
+> Va, Anode voltage: 250 V  
+> Vc, cathode coupling voltage: 30 V  
+> R_out, outer channel radius: 20 mm  
+> R_in, inner channel radius: 13.5 mm  
+> L_ch, channel length: 25 mm  
+> B_1-8: 341.2550, 22.7500, 11.8458, 1.9528, 5.5918, 23.2564, 1.4190, 8.7950  
+
+```matlab
+% Load manuscript version HallNN
+load('Pretrained_HallNN.mat');
+NNens = HallNN_best{1};
+net_ens_no = HallNN_best{3};
+NN_minmax = HallNN_best{9};
+```
+It uses **Pretrained_HallNN.mat** that contains 100 neural networks information trained with 18,000 datapoints.  
+> **Pretrained_HallNN.mat**
+> > HallNN_best{1}: 100 neural networks  
+> > HallNN_best{2}: informantion of 100 neural networks  
+> > HallNN_best{3-8}: M, H1, H2, adversarial rate, early stop, test fraction  
+> > HallNN_best{9}: min_max of input and output
+
+
+You can also chose to use Virtual Hall Thruster dataset trained HallNN - "ressults/HallNN_VHTver.mat"  
+```matlab
+% Load VHT-dataset-only-trained version HallNN -> Now it is a test case
+load('results/HallNN_VHTver.mat');
+NNens = NN_result{1};
+net_ens_no = NN_result{3};
+NN_minmax = NN_result{9};
+```
+It uses **results/HallNN_VHTver.mat** that contains 100 neural networks information trained with 4,500 VHT dataset (virtual Hall thruster).  
+> **results/HallNN_VHTver.mat**
+> > NN_result{1}: 100 neural networks
+> > NN_result{2}: informantion of 100 neural networks  
+> > NN_result{3-8}: M, H1, H2, adversarial rate, early stop, test fraction  
+> > NN_result{9}: min_max of input and output
+
+Therefore, this prediction result represents a test case since the KHT-40 information is not utilized in training HallNN_VHTver.  
+** Thrust **
+![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/results/HallNN_VHTver_KHT40_AFR_Thrust_V250.png?raw=true)
+
+## HallNN training with a virtual Hall thruster dataset
 ### Training_HallNN_with_VHT_Dataset.m  
 Requirements: Deep Learning Toolbox / Curve Fitting Toolbox  
 
