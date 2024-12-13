@@ -96,8 +96,11 @@ It uses **results/HallNN_VHTver.mat** that contains 100 neural networks informat
 > > NN_result{9}: min_max of input and output
 
 Therefore, this prediction result represents a test case since the KHT-40 information is not utilized in training HallNN_VHTver.  
-** Thrust **
-![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/results/HallNN_VHTver_KHT40_AFR_Thrust_V250.png?raw=true)
+
+Thrust           |  Discharge current  
+:-------------------------:|:-------------------------:  
+![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/results/HallNN_VHTver_KHT40_AFR_Thrust_V250.png?raw=true)  |  ![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/results/HallNN_VHTver_KHT40_AFR_Id_V250.png?raw=true)  
+
 
 ## HallNN training with a virtual Hall thruster dataset
 ### Training_HallNN_with_VHT_Dataset.m  
