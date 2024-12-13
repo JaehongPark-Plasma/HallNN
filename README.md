@@ -47,10 +47,11 @@ Contains 4,500 **"virtual"** Hall thruster performance data points.
 *NN_VHT_out.mat* is the output mat file (**thrust** and **discharge current**) for the MATLAB code.   
 
 ## Vritual Hall thruster (VHT) dataset overview
-### Input parameters $\leftrightarrow$ Thrust
-![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/Input_thrust_VHT.png?raw=true)
-### Input parameters $\leftrightarrow$ Discharge current
-![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/Input_Id_VHT.png?raw=true)
+
+Input parameters $\leftrightarrow$ Thrust         |  Input parameters $\leftrightarrow$ Discharge current
+:-------------------------:|:-------------------------:  
+![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/Input_thrust_VHT.png?raw=true)  |  ![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/Data/Input_Id_VHT.png?raw=true)
+
 
 ## Prediction using trained neural networks (manuscript version)
 ### PREDICTION_with_pretrained_HallNN.m  
