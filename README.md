@@ -79,7 +79,7 @@ It uses **Pretrained_HallNN.mat** that contains 100 neural networks information 
 > > HallNN_best{3-8}: M, H1, H2, adversarial rate, early stop, test fraction  
 > > HallNN_best{9}: min_max of input and output
 
-Thrust (HallNN_VHTver)          |  Discharge current (HallNN_VHTver)  
+Thrust (HallNN)          |  Discharge current (HallNN)  
 :-------------------------:|:-------------------------:  
 ![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/results/HallNN_KHT40_AFR_Thrust_V250.png?raw=true)  |  ![image](https://github.com/JaehongPark-Plasma/HallNN/blob/main/results/HallNN_KHT40_AFR_Id_V250.png?raw=true)  
 
